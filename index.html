@@ -1,0 +1,741 @@
+<!doctype html>
+<!-- PetaAI - direktori alat AI. Versi terpisah: index.html + styles.css + script.js -->
+<!-- PetaAI v1 - direktori alat AI, prototipe satu berkas. Konten statis; skrip hanya memperkaya. -->
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="PetaAI: direktori alat AI populer berbahasa Indonesia. Cari per kategori dan harga, lihat rekomendasi, simpan favorit.">
+    <title>PetaAI · Direktori alat AI populer</title>
+    <script id="auto-designer-preview-contract" type="application/json">
+{
+"artifactRole": "web-page",
+"authoringViewport": { "width": 1440, "height": 900 },
+"deviceAdaptation": { "enabled": true, "strategy": "responsive", "supportedDevices": ["desktop", "tablet", "mobile"] },
+"breakpoints": { "mobileMax": 639, "tabletMin": 640, "tabletMax": 1023, "desktopMin": 1024 },
+"defaultDevice": "canvas"
+}
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"/><path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></symbol>
+      <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol></svg>
+    <a class="skip" href="#direktori">Lewati ke direktori</a>
+    <header class="topnav" data-od-id="topnav">
+      <div class="container nav-in">
+        <a class="brand" href="#beranda">
+        <svg class="ic ic-lg" aria-hidden="true"><use href="#i-pin"/></svg>PetaAI</a>
+        <nav aria-label="Navigasi utama">
+          <a href="#direktori">Direktori</a>
+          <a class="opt" href="#rekomendasi">Rekomendasi</a>
+          <a href="#favorit">Favorit<span class="cnt" id="navFav" hidden>0</span></a>
+        </nav>
+        <button class="icon-btn" id="themeBtn" aria-label="Aktifkan tema gelap">
+          <svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+      </div>
+    </header>
+    <main id="konten">
+      <section class="hero" id="beranda" data-od-id="hero">
+        <div class="container">
+          <p class="eyebrow">Direktori alat AI</p>
+          <h1>Temukan alat AI yang tepat untuk pekerjaanmu.</h1>
+          <p class="lead">39 alat AI populer, dikelompokkan per kategori dan harga. Simpan favoritmu, lalu lihat rekomendasi yang menyesuaikan.</p>
+          <div class="search">
+            <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+            <label class="sr-only" for="q">Cari alat AI. Tekan garis miring untuk langsung ke kolom ini.
+            </label><input id="q" type="search" autocomplete="off" aria-describedby="qHint" placeholder="Cari alat, misalnya video, transkrip, atau gambar"><span class="kbd" aria-hidden="true">/</span>
+            <button class="icon-btn" id="clearQ" aria-label="Bersihkan pencarian" hidden>
+              <svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+          </div>
+          <p class="sr-only" id="qHint">Hasil tersaring langsung saat kamu mengetik.</p>
+        </div>
+      </section>
+      <section class="section" id="direktori" data-od-id="direktori" aria-labelledby="h2direktori">
+        <div class="container">
+          <div class="chips" id="chips" role="group" aria-label="Filter kategori">
+            <button class="chip" data-cat="all">Semua <span class="n">39</span></button>
+            <button class="chip" data-cat="asisten">Asisten umum <span class="n">5</span></button>
+            <button class="chip" data-cat="penulisan">Penulisan <span class="n">3</span></button>
+            <button class="chip" data-cat="gambar">Gambar &amp; desain <span class="n">6</span></button>
+            <button class="chip" data-cat="video">Video <span class="n">4</span></button>
+            <button class="chip" data-cat="audio">Audio <span class="n">3</span></button>
+            <button class="chip" data-cat="kode">Kode <span class="n">5</span></button>
+            <button class="chip" data-cat="produktivitas">Produktivitas <span class="n">5</span></button>
+            <button class="chip" data-cat="riset">Riset <span class="n">4</span></button>
+            <button class="chip" data-cat="infrastruktur">Infrastruktur <span class="n">4</span></button>
+          </div>
+          <div class="toolbar">
+            <div>
+              <h2 id="h2direktori">Semua alat</h2>
+              <p class="meta" id="resultCount" role="status">39 alat ditampilkan</p>
+            </div>
+            <div class="toolbar-ctl">
+              <div class="ctl">
+                <label class="ctl-l" for="sortSel">Urutkan
+                </label><span class="sel-wrap">
+                <select class="sel" id="sortSel">
+                  <option value="editor">Pilihan editor</option>
+                  <option value="az">Nama A-Z</option>
+                </select>
+                <svg class="ic ic-sm" aria-hidden="true"><use href="#i-chev"/></svg></span>
+              </div>
+              <div class="ctl">
+                <label class="ctl-l" for="priceSel">Harga
+                </label><span class="sel-wrap">
+                <select class="sel" id="priceSel">
+                  <option value="all">Semua harga</option>
+                  <option value="gratis">Ada versi gratis</option>
+                  <option value="bayar">Berbayar saja</option>
+                </select>
+                <svg class="ic ic-sm" aria-hidden="true"><use href="#i-chev"/></svg></span>
+              </div>
+              <button class="btn btn-secondary" id="resetBtn" hidden>Atur ulang filter</button>
+            </div>
+          </div>
+          <div class="grid" id="grid">
+            <article class="tool" data-cat="asisten" data-price="freemium" data-alias="openai chat obrolan">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=chatgpt.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="ChatGPT" aria-label="Simpan ChatGPT ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>
+              </h3>
+              <p class="desc">Asisten serba bisa: menulis, meringkas, menganalisis, sampai membuat gambar.</p>
+              <div class="tags"><span class="tag">Asisten umum</span><span class="tag">Freemium</span><span class="tag tag-pop">Populer</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="asisten" data-price="freemium" data-alias="anthropic tulis panjang">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/claude/D97757" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Claude" aria-label="Simpan Claude ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>
+              </h3>
+              <p class="desc">Kuat untuk menulis panjang dan menelaah dokumen tebal, termasuk kode.</p>
+              <div class="tags"><span class="tag">Asisten umum</span><span class="tag">Freemium</span><span class="tag tag-pop">Populer</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="asisten" data-price="freemium" data-alias="anthropic tulis panjang">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/Z.ai/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Z.ai" aria-label="Simpan Claude ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://chat.z.ai" target="_blank" rel="noopener">Z.ai</a>
+              </h3>
+              <p class="desc">Agent Mode Otonom kemampuan coding tingkat lanjut, serta kapasitas konteks yang sangat besar.</p>
+              <div class="tags"><span class="tag">Asisten umum</span><span class="tag">Freemium</span><span class="tag tag-pop">Populer</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="kode" data-price="freemium" data-alias="autocomplete coding editor">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/githubcopilot/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="GitHub Copilot" aria-label="Simpan GitHub Copilot ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot</a>
+              </h3>
+              <p class="desc">Melengkapi kode dan menjawab pertanyaan langsung dari dalam editor.</p>
+              <div class="tags"><span class="tag">Kode</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="gambar" data-price="bayar" data-alias="gambar ilustrasi">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=midjourney.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Midjourney" aria-label="Simpan Midjourney ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney</a>
+              </h3>
+              <p class="desc">Gambar artistik kualitas tinggi dengan kontrol gaya yang halus.</p>
+              <div class="tags"><span class="tag">Gambar &amp; desain</span><span class="tag">Berbayar</span><span class="tag tag-pop">Populer</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="gambar" data-price="freemium" data-alias="desain template">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=canva.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Canva" aria-label="Simpan Canva ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.canva.com" target="_blank" rel="noopener">Canva</a>
+              </h3>
+              <p class="desc">Desain presentasi dan konten media sosial, kini dengan alat AI bawaan.</p>
+              <div class="tags"><span class="tag">Gambar &amp; desain</span><span class="tag">Freemium</span><span class="tag tag-pop">Populer</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="riset" data-price="freemium" data-alias="pencarian sumber">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/perplexity/1FB8CD" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Perplexity" aria-label="Simpan Perplexity ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity</a>
+              </h3>
+              <p class="desc">Mesin jawaban yang menyertakan sumber, jadi tiap klaim bisa kamu periksa.</p>
+              <div class="tags"><span class="tag">Riset</span><span class="tag">Freemium</span><span class="tag tag-pop">Populer</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="kode" data-price="freemium" data-alias="editor kode">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/cursor/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Cursor" aria-label="Simpan Cursor ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a>
+              </h3>
+              <p class="desc">Editor kode yang dirancang untuk bekerja bersama AI sejak awal.</p>
+              <div class="tags"><span class="tag">Kode</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="asisten" data-price="freemium" data-alias="google workspace">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Gemini" aria-label="Simpan Gemini ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a>
+              </h3>
+              <p class="desc">Terhubung ke layanan Google, cocok untuk riset dan mengolah dokumen kerja.</p>
+              <div class="tags"><span class="tag">Asisten umum</span><span class="tag">Freemium</span><span class="tag tag-pop">Populer</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="audio" data-price="freemium" data-alias="suara narasi">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/elevenlabs/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="ElevenLabs" aria-label="Simpan ElevenLabs ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a>
+              </h3>
+              <p class="desc">Suara sintetis yang natural, termasuk untuk narasi berbahasa Indonesia.</p>
+              <div class="tags"><span class="tag">Audio</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="video" data-price="freemium" data-alias="video sinematik">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=runwayml.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Runway" aria-label="Simpan Runway ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://runwayml.com" target="_blank" rel="noopener">Runway</a>
+              </h3>
+              <p class="desc">Menghasilkan dan mengedit video, termasuk menghapus objek dari klip.</p>
+              <div class="tags"><span class="tag">Video</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="produktivitas" data-price="bayar" data-alias="catatan workspace">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/notion/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Notion AI" aria-label="Simpan Notion AI ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.notion.com/product/ai" target="_blank" rel="noopener">Notion AI</a>
+              </h3>
+              <p class="desc">Meringkas, menulis, dan mencari di dalam workspace Notion.</p>
+              <div class="tags"><span class="tag">Produktivitas</span><span class="tag">Berbayar</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="gambar" data-price="freemium" data-alias="ui ux prototipe">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Figma" aria-label="Simpan Figma ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.figma.com" target="_blank" rel="noopener">Figma</a>
+              </h3>
+              <p class="desc">Desain antarmuka kolaboratif dengan fitur AI untuk menyusun draf cepat.</p>
+              <div class="tags"><span class="tag">Gambar &amp; desain</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="penulisan" data-price="freemium" data-alias="terjemahan">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/deepl/0F2B46" alt="" loading="lazy"></span>
+                <button class="fav" data-name="DeepL" aria-label="Simpan DeepL ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.deepl.com" target="_blank" rel="noopener">DeepL</a>
+              </h3>
+              <p class="desc">Penerjemah dengan hasil paling natural, termasuk untuk bahasa Indonesia.</p>
+              <div class="tags"><span class="tag">Penulisan</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="audio" data-price="freemium" data-alias="transkrip podcast">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=descript.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Descript" aria-label="Simpan Descript ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.descript.com" target="_blank" rel="noopener">Descript</a>
+              </h3>
+              <p class="desc">Mengedit audio dan video dengan mengedit transkripnya, seperti dokumen.</p>
+              <div class="tags"><span class="tag">Audio</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="asisten" data-price="gratis" data-alias="gratis matematika logika">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/deepseek/5786FE" alt="" loading="lazy"></span>
+                <button class="fav" data-name="DeepSeek" aria-label="Simpan DeepSeek ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://chat.deepseek.com" target="_blank" rel="noopener">DeepSeek</a>
+              </h3>
+              <p class="desc">Model penalaran gratis, kuat untuk matematika dan soal logika.</p>
+              <div class="tags"><span class="tag">Asisten umum</span><span class="tag">Gratis</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="video" data-price="freemium" data-alias="avatar presenter">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=synthesia.io&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Synthesia" aria-label="Simpan Synthesia ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.synthesia.io" target="_blank" rel="noopener">Synthesia</a>
+              </h3>
+              <p class="desc">Video presenter AI tanpa kamera, sering dipakai untuk pelatihan karyawan.</p>
+              <div class="tags"><span class="tag">Video</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="produktivitas" data-price="freemium" data-alias="otomasi alur kerja">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/zapier/FF4F00" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Zapier" aria-label="Simpan Zapier ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://zapier.com" target="_blank" rel="noopener">Zapier</a>
+              </h3>
+              <p class="desc">Menghubungkan aplikasi dan menambahkan langkah AI ke alur kerja.</p>
+              <div class="tags"><span class="tag">Produktivitas</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="gambar" data-price="freemium" data-alias="gambar teks poster">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=ideogram.ai&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Ideogram" aria-label="Simpan Ideogram ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://ideogram.ai" target="_blank" rel="noopener">Ideogram</a>
+              </h3>
+              <p class="desc">Paling andal untuk gambar yang memuat teks terbaca, bagus untuk poster.</p>
+              <div class="tags"><span class="tag">Gambar &amp; desain</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="riset" data-price="gratis" data-alias="pdf kutipan">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/notebooklm/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="NotebookLM" aria-label="Simpan NotebookLM ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://notebooklm.google.com" target="_blank" rel="noopener">NotebookLM</a>
+              </h3>
+              <p class="desc">Mengobrol dengan dokumen dan PDF milikmu, lengkap dengan kutipan sumber.</p>
+              <div class="tags"><span class="tag">Riset</span><span class="tag">Gratis</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="kode" data-price="freemium" data-alias="aplikasi browser">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/replit/F26207" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Replit" aria-label="Simpan Replit ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://replit.com" target="_blank" rel="noopener">Replit</a>
+              </h3>
+              <p class="desc">Membangun dan menjalankan aplikasi dari browser, dibantu agen.</p>
+              <div class="tags"><span class="tag">Kode</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="audio" data-price="freemium" data-alias="musik lagu">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/suno/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Suno" aria-label="Simpan Suno ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://suno.com" target="_blank" rel="noopener">Suno</a>
+              </h3>
+              <p class="desc">Membuat lagu lengkap dengan vokal hanya dari satu deskripsi.</p>
+              <div class="tags"><span class="tag">Audio</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="gambar" data-price="freemium" data-alias="gambar photoshop">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=firefly.adobe.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Adobe Firefly" aria-label="Simpan Adobe Firefly ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://firefly.adobe.com" target="_blank" rel="noopener">Adobe Firefly</a>
+              </h3>
+              <p class="desc">Generator gambar dari Adobe yang menyatu dengan Photoshop dan Illustrator.</p>
+              <div class="tags"><span class="tag">Gambar &amp; desain</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="produktivitas" data-price="freemium" data-alias="presentasi slide">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=gamma.app&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Gamma" aria-label="Simpan Gamma ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://gamma.app" target="_blank" rel="noopener">Gamma</a>
+              </h3>
+              <p class="desc">Menyusun presentasi dan dokumen rapi dari satu prompt.</p>
+              <div class="tags"><span class="tag">Produktivitas</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="penulisan" data-price="freemium" data-alias="tata bahasa inggris">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/grammarly/027E6F" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Grammarly" aria-label="Simpan Grammarly ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.grammarly.com" target="_blank" rel="noopener">Grammarly</a>
+              </h3>
+              <p class="desc">Memeriksa tata bahasa, ejaan, dan nada tulisan berbahasa Inggris.</p>
+              <div class="tags"><span class="tag">Penulisan</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="video" data-price="freemium" data-alias="video kamera">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=lumalabs.ai&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Luma AI" aria-label="Simpan Luma AI ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://lumalabs.ai" target="_blank" rel="noopener">Luma AI</a>
+              </h3>
+              <p class="desc">Video dari teks atau gambar dengan gerakan kamera yang halus.</p>
+              <div class="tags"><span class="tag">Video</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="infrastruktur" data-price="freemium" data-alias="model open source">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Hugging Face" aria-label="Simpan Hugging Face ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://huggingface.co" target="_blank" rel="noopener">Hugging Face</a>
+              </h3>
+              <p class="desc">Rumah model open source, dataset, dan demo dari komunitas.</p>
+              <div class="tags"><span class="tag">Infrastruktur</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="produktivitas" data-price="freemium" data-alias="rapat notulen">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=otter.ai&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Otter.ai" aria-label="Simpan Otter.ai ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://otter.ai" target="_blank" rel="noopener">Otter.ai</a>
+              </h3>
+              <p class="desc">Mencatat rapat secara otomatis lengkap dengan transkrip dan ringkasan.</p>
+              <div class="tags"><span class="tag">Produktivitas</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="gambar" data-price="freemium" data-alias="aset game">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=leonardo.ai&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Leonardo AI" aria-label="Simpan Leonardo AI ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://leonardo.ai" target="_blank" rel="noopener">Leonardo AI</a>
+              </h3>
+              <p class="desc">Aset game dan ilustrasi dengan gaya yang bisa dikunci agar konsisten.</p>
+              <div class="tags"><span class="tag">Gambar &amp; desain</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="kode" data-price="freemium" data-alias="agen kode">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/windsurf/0B100F" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Windsurf" aria-label="Simpan Windsurf ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://windsurf.com" target="_blank" rel="noopener">Windsurf</a>
+              </h3>
+              <p class="desc">IDE dengan agen yang bisa mengerjakan tugas lintas berkas.</p>
+              <div class="tags"><span class="tag">Kode</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="riset" data-price="freemium" data-alias="paper literatur">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=elicit.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Elicit" aria-label="Simpan Elicit ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://elicit.com" target="_blank" rel="noopener">Elicit</a>
+              </h3>
+              <p class="desc">Menelusuri literatur ilmiah dan mengekstrak temuannya ke tabel.</p>
+              <div class="tags"><span class="tag">Riset</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="penulisan" data-price="freemium" data-alias="parafrase">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=quillbot.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="QuillBot" aria-label="Simpan QuillBot ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://quillbot.com" target="_blank" rel="noopener">QuillBot</a>
+              </h3>
+              <p class="desc">Parafrase dan ringkas teks, sering dipakai saat mengerjakan kutipan.</p>
+              <div class="tags"><span class="tag">Penulisan</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="video" data-price="freemium" data-alias="video efek">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=pika.art&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Pika" aria-label="Simpan Pika ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://pika.art" target="_blank" rel="noopener">Pika</a>
+              </h3>
+              <p class="desc">Efek video pendek yang cepat dibuat dari foto atau sedikit teks.</p>
+              <div class="tags"><span class="tag">Video</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="infrastruktur" data-price="freemium" data-alias="api model">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/openrouter/94A3B8" alt="" loading="lazy"></span>
+                <button class="fav" data-name="OpenRouter" aria-label="Simpan OpenRouter ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a>
+              </h3>
+              <p class="desc">Satu API untuk banyak model, memudahkan membandingkan harga.</p>
+              <div class="tags"><span class="tag">Infrastruktur</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="produktivitas" data-price="freemium" data-alias="otomasi visual">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/make/6D00CC" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Make" aria-label="Simpan Make ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.make.com" target="_blank" rel="noopener">Make</a>
+              </h3>
+              <p class="desc">Otomasi alur kerja antar aplikasi di kanvas visual dengan modul AI.</p>
+              <div class="tags"><span class="tag">Produktivitas</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="riset" data-price="freemium" data-alias="paper jurnal">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=consensus.app&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Consensus" aria-label="Simpan Consensus ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://consensus.app" target="_blank" rel="noopener">Consensus</a>
+              </h3>
+              <p class="desc">Merangkum bukti dari banyak paper untuk satu pertanyaan penelitian.</p>
+              <div class="tags"><span class="tag">Riset</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="kode" data-price="freemium" data-alias="komponen web">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=v0.app&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="v0" aria-label="Simpan v0 ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://v0.app" target="_blank" rel="noopener">v0</a>
+              </h3>
+              <p class="desc">Mengubah deskripsi menjadi komponen antarmuka web siap tempel.</p>
+              <div class="tags"><span class="tag">Kode</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="asisten" data-price="freemium" data-alias="x postingan">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=grok.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Grok" aria-label="Simpan Grok ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://grok.com" target="_blank" rel="noopener">Grok</a>
+              </h3>
+              <p class="desc">Asisten dari xAI dengan akses ke postingan terbaru di X.</p>
+              <div class="tags"><span class="tag">Asisten umum</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="infrastruktur" data-price="freemium" data-alias="api model server">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/replicate/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Replicate" aria-label="Simpan Replicate ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://replicate.com" target="_blank" rel="noopener">Replicate</a>
+              </h3>
+              <p class="desc">Menjalankan model open source lewat API tanpa mengurus server.</p>
+              <div class="tags"><span class="tag">Infrastruktur</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="tool" data-cat="infrastruktur" data-price="gratis" data-alias="lokal privasi">
+              <div class="tool-head">
+                <span class="logo"><img src="https://cdn.simpleicons.org/ollama/000000" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Ollama" aria-label="Simpan Ollama ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://ollama.com" target="_blank" rel="noopener">Ollama</a>
+              </h3>
+              <p class="desc">Menjalankan model AI di komputer sendiri, data tidak keluar dari perangkat.</p>
+              <div class="tags"><span class="tag">Infrastruktur</span><span class="tag">Gratis</span>
+              </div>
+            </article>
+          </div>
+          <div class="empty" id="emptyWrap" hidden>
+            <svg class="ic ic-lg" aria-hidden="true"><use href="#i-search"/></svg>
+            <h3>Tidak ada alat yang cocok
+            </h3>
+            <p id="emptyQueryLine">Kata kunci "<span id="emptyQ"></span>" tidak menemukan apa pun di direktori ini.</p>
+            <p id="emptyFilterLine" hidden>Kombinasi filter ini belum menyisakan alat apa pun.</p>
+            <p>Coba kata kunci lain, atau mulai dari kategori populer berikut.</p>
+            <div class="chips" role="group" aria-label="Kategori populer">
+              <button class="chip" data-suggest="gambar">Gambar &amp; desain <span class="n">6</span></button>
+              <button class="chip" data-suggest="video">Video <span class="n">4</span></button>
+              <button class="chip" data-suggest="kode">Kode <span class="n">5</span></button>
+            </div>
+            <button class="btn btn-secondary" id="emptyReset">Tampilkan semua alat</button>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="rekomendasi" data-od-id="rekomendasi" aria-labelledby="h2rek">
+        <div class="container">
+          <div class="sec-head">
+            <div>
+              <h2 id="h2rek">Rekomendasi untukmu</h2>
+              <p class="meta" id="recNote">Pilihan editor minggu ini. Simpan alat agar saran menyesuaikan favoritmu.</p>
+            </div>
+            <button class="btn btn-secondary" id="shuffleBtn">
+              <svg class="ic ic-sm" aria-hidden="true"><use href="#i-shuffle"/></svg>Acak ulang</button>
+          </div>
+          <div class="grid-rec" id="recGrid">
+            <article class="rec">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=descript.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Descript" aria-label="Simpan Descript ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://www.descript.com" target="_blank" rel="noopener">Descript</a>
+              </h3>
+              <p class="why">
+                <svg class="ic ic-sm" aria-hidden="true"><use href="#i-spark"/></svg><span>Mengedit audio dan video lewat transkrip, bukan lewat timeline.</span></p>
+              <div class="tags"><span class="tag">Audio</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="rec">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=elicit.com&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Elicit" aria-label="Simpan Elicit ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://elicit.com" target="_blank" rel="noopener">Elicit</a>
+              </h3>
+              <p class="why">
+                <svg class="ic ic-sm" aria-hidden="true"><use href="#i-spark"/></svg><span>Menyisir literatur ilmiah dan merapikan temuan ke dalam tabel.</span></p>
+              <div class="tags"><span class="tag">Riset</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+            <article class="rec">
+              <div class="tool-head">
+                <span class="logo"><img src="https://www.google.com/s2/favicons?domain=ideogram.ai&amp;sz=64" alt="" loading="lazy"></span>
+                <button class="fav" data-name="Ideogram" aria-label="Simpan Ideogram ke favorit">
+                  <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></button>
+              </div>
+              <h3 class="name">
+                <a href="https://ideogram.ai" target="_blank" rel="noopener">Ideogram</a>
+              </h3>
+              <p class="why">
+                <svg class="ic ic-sm" aria-hidden="true"><use href="#i-spark"/></svg><span>Pilihan tepat saat gambar perlu memuat teks yang terbaca.</span></p>
+              <div class="tags"><span class="tag">Gambar &amp; desain</span><span class="tag">Freemium</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="favorit" data-od-id="favorit" aria-labelledby="h2fav">
+        <div class="container">
+          <div class="sec-head">
+            <div>
+              <h2 id="h2fav">Favoritmu</h2>
+              <p class="meta" id="favCount" role="status">Belum ada alat tersimpan</p>
+            </div>
+            <button class="btn btn-ghost" id="clearFav" hidden>Bersihkan semua</button>
+          </div>
+          <p class="note" id="favNote" hidden>
+            <svg class="ic ic-sm" aria-hidden="true"><use href="#i-info"/></svg>Penyimpanan browser tidak tersedia di sini, jadi favorit hanya bertahan selama sesi ini.</p>
+          <div id="favList" hidden>
+          </div>
+          <div class="empty" id="favEmpty">
+            <svg class="ic ic-lg" aria-hidden="true"><use href="#i-book"/></svg>
+            <h3>Belum ada favorit
+            </h3>
+            <p>Tekan ikon hati pada kartu alat untuk menyimpannya di sini. Daftar ini disimpan di browser kamu, bukan di akun.</p>
+            <a class="btn btn-primary" href="#direktori">Jelajahi direktori</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="pagefoot" data-od-id="footer">
+      <div class="container foot-row">
+        <div><span class="foot-brand">PetaAI</span>
+          <p>Direktori alat AI berbahasa Indonesia. Harga dan fitur bisa berubah kapan saja, jadi cek situs resmi masing-masing alat sebelum memutuskan.</p>
+        </div>
+        <div class="foot-right">
+          <a href="mailto:putramrd.089@gmail.com">putramrd.089@gmail.com</a><span class="meta">Prototipe · Oktober 2026</span>
+        </div>
+      </div>
+    </footer>
+    <div class="sr-only" role="status" aria-live="polite" id="live">
+    </div>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
