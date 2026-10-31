@@ -55,7 +55,7 @@
     cards.forEach(function(c){
       var ok=true, p=c.getAttribute('data-price');
       if(state.cat!=='all'&&c.getAttribute('data-cat')!==state.cat)ok=false;
-      if(ok&&state.price==='gratis'&&p==='bayar')ok=false;
+      if(ok&&state.price==='gratis'&&p!=='gratis'&&p!=='freemium')ok=false;
       if(ok&&state.price==='bayar'&&p!=='bayar')ok=false;
       if(ok&&terms.length)ok=terms.every(function(t){return c.hay.indexOf(t)>-1});
       c.hidden=!ok;
@@ -117,6 +117,7 @@
   }
   var EDITOR=['Descript','Elicit','v0','Luma AI','Ideogram','Ollama'];
   var REASON={
+    'agent-qa':'Menguji web dan aplikasi seluler dengan memori persisten dan bukti eksekusi.',
     'Descript':'Mengedit audio dan video lewat transkrip, bukan lewat timeline.',
     'Elicit':'Menyisir literatur ilmiah dan merapikan temuan ke dalam tabel.',
     'v0':'Mengubah kalimat deskriptif menjadi komponen antarmuka siap pakai.',
